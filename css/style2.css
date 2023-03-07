@@ -1,0 +1,360 @@
+:root{
+    --blanco: #ffffff; 
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --degradado: #DFE9F3;
+
+    --tamano-fuente-principal: 3.8rem;
+    --tamano-fuente-secundaria: 2.8rem;
+    --tamano-fuente-terciaria: 1.8rem;
+
+    --bordes-normal: 1rem;
+    --bordes-estrecho: .5rem;
+
+
+    
+    --fuente-principal: 'Orbitron', sans-serif;
+
+}
+
+html{
+    font-size: 62.5%;
+
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 16px; /* 1 rem = 10 px */ 
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--degradado) 0%, var(--blanco) 100%);
+}
+
+h1{
+    font-size: var(--tamano-fuente-principal);
+    color: var(--oscuro);
+    font-family: var(--fuente-principal);
+}
+
+h2{
+    font-size: var(--tamano-fuente-secundaria);
+}
+
+h3{
+    font-size: var(--tamano-fuente-terciaria);
+    color: var(--secundario);
+}
+
+h1,h2,h3{
+    text-align: center;
+
+}
+
+.titulo  span{ /*Estas son las clases*/
+    font-size: var(--tamano-fuente-terciaria);
+    color: var(--primario);
+    text-transform: uppercase;
+    display: block;
+
+}
+
+.titulo2 {
+    text-align: center;
+    font-size: var(--tamano-fuente-principal);
+    color: var(--oscuro);
+    text-transform: uppercase;
+}
+
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) { 
+    .boton{
+        width: auto;
+    }
+
+}
+
+.navegacion-principal { 
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) {
+
+}
+
+
+@media (min-width: 768px) {
+    .navegacion-principal { 
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .servicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 3rem;  
+    
+    }   
+    .boton{
+        width: auto;
+    }
+
+}
+
+/*Utilidades*/
+.w-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-100{
+        width: auto;
+    }
+}
+
+
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+
+
+.nav-bg{ 
+    background-color: var(--secundario);
+
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+
+.navegacion-principal a{ 
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgb(0 0 0/ 70% );
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,.contenido-hero p {
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sombra{
+
+
+    -webkit-box-shadow: 0px 0px 103px 1px rgba(162,194,224,1);
+    -moz-box-shadow: 0px 0px 103px 1px rgba(162,194,224,1);
+    box-shadow: 0px 0px 103px 1px rgba(162,194,224,1);
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* .sombra{
+    background: rgba( 255, 255, 255, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+} */
+
+/* .servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30rem 30rem 30rem;
+    align-items: center;
+    justify-content: center;
+    
+
+} */
+
+.servicios2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* .servicios2 .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: #69ACFF;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+} */
+
+.servicios2 p{
+    text-align: center;
+    font-weight:100;
+}
+
+.servicios .iconos{
+    height: 7rem;
+    width: 15rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+        background: rgba( 105, 172, 255, 0.6 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 9px );
+        -webkit-backdrop-filter: blur( 9px );
+        border-radius: var(--bordes-normal);
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+/**Contacto**/
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /**Utilizar el valor mas peque;o**/
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: var(--bordes-normal);
+}
+
+
+ .formulario legend{ /*Contactame amarillo */
+    text-align: center;
+    font-weight: bold;
+    color: var(--primario);
+    font-size: var(--tamano-fuente-terciaria);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: var(--tamano-fuente-terciaria);
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2fr;
+    }  
+}
+
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: var(--bordes-estrecho);
+}
+
+
+.enviar .boton{
+    width: 100%;
+}
+
+/*Footer*/
+footer p{
+    margin-right: 2rem;
+}
+
+
+.campo textarea{
+    height: 20rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
