@@ -10,7 +10,7 @@
     --degradado: #DFE9F3;
 
 
-    --tamano-fuente-principal: 3.8rem;
+    --tamano-fuente-principal: 3.6rem;
     --tamano-fuente-secundaria: 2.8rem;
     --tamano-fuente-terciaria: 1.8rem;
 
@@ -92,8 +92,7 @@ a{
     border-radius: var(--bordes-normal);
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-    padding: 6rem 3rem;
-    vertical-align: text-bottom;
+
 
 }
 
@@ -115,25 +114,56 @@ a{
 
 /* HEADER */
 
-
 .header--grid{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    flex-direction: column;
     background-color: var(--primario);
 }
 
+@media (min-width: 768px) {
+    .header--grid{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        background-color: var(--primario);
+    }
+}
+
+
 .header--nav__contenedor{
     display: flex;
+    gap: 2rem;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    margin: 0rem 2rem;
     
     margin: 0rem 10rem;
     text-transform: uppercase;
     font-weight: bold;
     font-size: var(--tamano-fuente-secundaria);
     color: var(--blanco);
+
+
+}  
+
+@media (min-width: 768px) {
+    .header--nav__contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        margin: 0rem 10rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: var(--tamano-fuente-secundaria);
+        color: var(--blanco);
+    
+    
+    }  
 }
+
+
 
 .header--nav__contenedor a , h1{
     color: var(--blanco);
@@ -168,6 +198,12 @@ a{
     color: var(--blanco);
 }
 
+
+
+
+
+
+
 .main--grid h1{
     color: var(--oscuro);
 }
@@ -176,9 +212,23 @@ a{
     background-image: url(/img/aviones.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    object-fit: center;
+    object-position: center;
+    background-position: center;
+
+    height: 600px;
+    margin: 0rem;
 
 }
+
+@media (min-width: 768px) {
+    .main--grid {
+        height: 525px;
+    
+    } 
+}
+
+
 
 .main--grid__contenido{
     display: flex;
@@ -186,28 +236,79 @@ a{
     background-color: rgb(255 255 255/ 40% );
     width: 100%;
     height: 100%;
+    margin: 0rem;
 
 }
+
 
 .main--flex{
     display: flex;
     justify-content: space-evenly;
     text-align: end;
+    vertical-align: text-bottom;
+}
+
+@media (min-width: 768px) {
+    .main--flex{
+        padding: 6rem 3rem;
+        vertical-align: text-bottom;
+    } 
+}
+
+.main--flex h2{
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+}
+
+@media (min-width: 768px) {
+    .main--flex h2{
+        padding: 6rem 3rem;
+        margin: 0rem;
+    } 
+}
+
+.main--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+@media (min-width: 768px) {
+    .main--flex{
+        flex-direction: row;
+    }
+
 }
 
 .section--viajes{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: end;
-
+    display: flex;
+    flex-direction: column;
     border-radius: var(--bordes-normal);
     
-    height: 30rem;
+    height: 45rem;
     margin-top: 3rem;
 
-    justify-content: center;
-    align-items: center;
+
     
+} 
+
+
+@media (min-width: 768px) {
+    .section--viajes{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: end;
+    
+        border-radius: var(--bordes-normal);
+        
+        height: 30rem;
+        margin-top: 3rem;
+    
+        justify-content: center;
+        align-items: center;
+        
+    } 
 }
 
 .section--viajes__titulo{
@@ -219,6 +320,16 @@ a{
     max-width: 80%;
     height: auto;
     border-radius: var(--bordes-estrecho);
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .section--viajes__foto{
+        max-width: 80%;
+        height: auto;
+        border-radius: var(--bordes-estrecho);
+        margin-top: 0rem;
+    }
 }
 
 .grid--imagen{
@@ -239,6 +350,15 @@ a{
     color: var(--terciario);
     text-transform: uppercase;
     font-size: 2.8rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .section--viajes__titulo2{
+        color: var(--terciario);
+        text-transform: uppercase;
+        font-size: 2.8rem;
+    } 
 }
 
 .section--viajes__navegacion{
@@ -251,8 +371,12 @@ a{
     font-weight: bold;
 }
 
+
+
+
 footer{
     display: flex;
+    flex-direction: column;
     padding: 1rem;
     margin-top: 3rem;
     justify-content: space-between;
@@ -261,15 +385,43 @@ footer{
 }
 
 footer h1{
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
+
 
 }
 
 footer h2{
 font-weight: lighter;
-font-size: 1.8rem;
-text-transform: uppercase;    
+font-size: 1.2rem;
+text-transform: uppercase;   
+margin-top: 0rem; 
+}
+
+@media (min-width: 768px) {
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        margin-top: 3rem;
+        justify-content: space-between;
+        background-color: var(--primario);
+        text-align: center;
+        align-items: center;
+    }
+    
+    footer h1{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    
+    }
+    
+    footer h2{
+    font-weight: lighter;
+    font-size: 1.8rem;
+    text-transform: uppercase;    
+    text-align: center;
+    } 
 }
 
 
